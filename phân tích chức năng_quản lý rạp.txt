@@ -1,14 +1,12 @@
-Đề tài : 	
+Đề tài : 
+	
 Phần mềm quản lý bán vé xem phim 
 Mô tả : 
 Công ty ABC là công ty công chiếu phim có rất nhiều chi nhánh và phim chiếu trong ngày. 
 Để tránh tình trạng khách hàng chen lấn xô đẩy khi mua vé xem phim  và có thể không mua được vé theo phim mình mong muốn, 
 công ty ABC muốn triển khai 1 phần mềm có thể giúp khách hàng dễ dàng đặt vé và theo dõi thời gian chiếu cũng như ngày chiếu của khách hàng. 
 Khách hàng chỉ cần vào phần mềm chọn chi nhánh  và đặt vé nếu phim còn chiếu và ghế xem còn trống.
-Thống Kê:
-	Số vé bán được của từng rạp theo tháng 
-	Các phim đang ăn khách => tăng thời gian công chiếu  
-
+ 
 Yêu cầu Hệ Thống: 
 	Yêu cầu Phi chức năng:
 	Giao diện thân thiện, dễ sử dụng với người dung.
@@ -16,32 +14,62 @@ Yêu cầu Hệ Thống:
 	Quản lý đầy đủ , chặt chẽ về thông tin các rạp và quá trình hoạt động của mỗi rạp 
 
 Yêu cầu chức năng:
-	Supper Admin
-		- Quản lý các Admin 
-		- Quản lý tất cả các rạp phim (Xem , thêm ,sửa thông tin rạp)
-		- Có đầy đủ các chức năng của Admin
+
+1. Supper Admin
+	- Quản lý các Admin 
+	- Có đầy đủ các chức năng của Admin
+	- xóa phim, lịch chiếu, phòng chiếu, sự kiện, ghế
+
+
+
+2. Admin 
+	- Quản lý tất cả các rạp phim (Xem , thêm ,sửa thông tin rạp)
+
+	- Quản lý danh sách phim: 
+		+ Xem danh sách phim
+		+ Tìm kiếm phim
+		+ Thêm phim
+		+ Cập nhật thông tin phim:
+			Phim sắp công chiếu (chưa có lịch công chiếu -> chưa đặt được vé) : Mô tả về phim, trailler, thời gian bắt đầu công chiếu
+			Phim đang công chiếu(đặt được vé) : ngày, giờ, tên phim, giá vé, số ghế đã đặt, số ghế trống của mỗi bộ phim , phim ăn khách
+
+	- Quản lý lịch chiếu phim
+		+ Xem lịch chiếu phim
+		+ Tìm kiếm lịch chiếu
+		+ Thêm lịch chiếu
+		+ Sửa lịch chiếu: 
+			=>Chú ý: về thời gian chiếu của từng bộ phim 
+				-Thời gian chiếu của mỗi phim tuỳ thuộc vào độ ăn khách của phim đó (nhiều nhất là 2 tháng)
+				-Thời gian chiếu ít nhất của 1 bộ phim là 2 tuần
+
+	- Quản lý danh sách các phòng chiếu phim
+		+ Xem danh sách phòng 
+		+ Tìm kiếm danh sách phòng 
+		+ Thêm phòng
+		+ Cập nhật thông tin phòng: Số lượng vé đã đặt của các phòng theo từng ngày
+
+	- Quản lý danh sách các sự kiện khuyến mãi ở rạp phim
+		+ Xem các sự kiện
+		+ Tìm kiếm sự kiện
+		+ Thêm sự kiện
+		+ Cập nhật sự kiện: các dịp lễ, tết, ngày nghỉ...
+	- Quản lý ghế: 
+		+ Loại ghế: vip, đôi, thường
+		+ Thêm ghế
+		+ Thay đổi thông tin ghế
 	
-
-	Admin 
-	Quản lý phim
-		- Phim sắp công chiếu (chưa có lịch công chiếu -> chưa đặt được vé) : Mô tả về phim , trailler , thời gian bắt đầu công chiếu
-		- Phim đang công chiếu(đặt được vé) : Quản lý số ghế đã đặt , số ghế trống của mỗi bộ phim , phim ăn khách
-	Quản lý thời gian chiếu của từng bộ phim 
-		-Thời gian chiếu của mỗi phim tuỳ thuộc vào độ ăn khách của phim đó (nhiều nhất là 2 tháng)
-		-Thời gian chiếu ít nhất của 1 bộ phim là 2 tuần
-	Quản lý các phòng chiếu 
-		- Số lượng vé đã đặt của các phòng theo từng ngày
+	- Thống kê số lượng phim và vé xem phim
 
 
-	Khách hàng : 
+
+3. Khách hàng : 
 	Lưu ý : Có 2 đối tượng là khách hàng có tài khoản và khách không có tài khoản 
 	khách có tài khoản sẽ có nhiều quyền hơn(mua vé, xem lịch sử mua, xem tài khoản, chỉnh sửa thông tin tài khoản)
-	* Chức năng 1 : Đăng ký 
-		- Khách hàng có thể đăng ký thông tin để tạo tài khoản và mua vé 
-		- Điền đầy đủ các trường => Đăng ký
-	* Chức năng 2 : Đăng nhập
-		- Đăng nhập để có thể đặt vé 
-	* Chức năng 3 : Xem (Chọn rạp cần xem)
+
+	* Chức năng 1 : Tìm kiếm 
+		- Tìm kiếm thể loại phim, tên phim	
+
+	* Chức năng 2 : Xem (rạp & phim)
 		- Rạp : Địa điểm và thông tin của rạp đang được chọn 
 		- Phim : 
 			+ Phim đang công chiếu : 
@@ -49,22 +77,31 @@ Yêu cầu chức năng:
 				Xem các khung giờ chiếu phim của ngày được chọn 
 				Xem mô tả của phim 
 				Xem video trailler của phim
+				giá vé từng rạp
 			+ Phim sắp công chiếu
 				Xem mô tả của phim 
 				Xem video trailler của phim
-		- Tài khoản:
-			+ Xem thông tin tài khoản (Ảnh, Tên, số điện thoại, email, địa chỉ) 
-			+ Xem thông tin thẻ thành viên (Số thẻ, Hạng thẻ, ngày kích hoạt, tổng chi tiêu, điểm tích luỹ, điểm đã tiêu, điểm khả dụng)
-			+ Lịch sử mua vé(mã hoá đơn, tên phim, rạp chiếu , suất chiếu, ghế đã đặt, ngày đặt, điểm((+) đối với tích luỹ,(-) đối với tiêu dùng)
-			+ Lịch sử điểm đã sử dụng
-			+ voucher đang có , voucher đã sử dụng
-		- Bảng giá vé của từng rạp 
-		- Xem (tin tức) của toàn bộ hệ thống :
-			+ khuyến mãi theo từng dịp lễ  
-			+ Công bố các rạp mới 
-			+ Những bộ phim đang ăn khách và được khán giả đánh giá cao 
-	* Chức năng 4 : Đặt vé 
-		- Đăng ký , đăng nhập 
+			+ Xem (tin tức) của toàn bộ hệ thống :
+				khuyến mãi theo từng dịp lễ  
+				Công bố các rạp mới 
+				Những bộ phim đang ăn khách và được khán giả đánh giá cao
+			+ Xem tài khoản(khách hàng có tài khoản)
+				Xem thông tin tài khoản (Ảnh, Tên, số điện thoại, email, địa chỉ) 
+				Xem thông tin thẻ thành viên (Số thẻ, Hạng thẻ, ngày kích hoạt, tổng chi tiêu, điểm tích luỹ, điểm đã tiêu, điểm khả dụng)
+				Lịch sử mua vé(mã hoá đơn, tên phim, rạp chiếu , suất chiếu, ghế đã đặt, ngày đặt, điểm((+) đối với tích luỹ,(-) đối với tiêu dùng)
+				Lịch sử điểm đã sử dụng
+				Voucher đang có , voucher đã sử dụng 
+
+	* Chức năng 3 : Đăng ký 
+		- Khách hàng có thể đăng ký thông tin để tạo tài khoản và mua vé, bình luận  
+		- Điền đầy đủ các trường => Đăng ký
+
+	* Chức năng 4 : Đăng nhập
+		- Đăng nhập để có thể đặt vé 
+		- Điền đầy đủ các trường => Đăng nhập
+
+	* Chức năng 5 : Đặt vé 
+		- Chỉ khách có tài khoản( khách ko có tài khoản cần đăng ký) 
 		- Chọn rạp xem (Vị trí , chi nhánh) -> chưa chọn (Chưa đặt được vé)
 		- Chọn phim 
 		- Chọn độ tuổi của người xem(vì có những bộ phim cấm trẻ em)
@@ -72,11 +109,11 @@ Yêu cầu chức năng:
 		- Kiểm tra còn ghế : (Kiểm tra ghế trống, ghế vip, ghế đôi) -> nếu còn => đặt được vé 
 		- Kiểm tra thông tin 
 		- Thanh toán => Đặt vé
-	* Chức năng 5 : Sửa tài khoản 
+
+	* Chức năng 6 : Sửa tài khoản 
 		- Chỉnh sửa thông tin tài khoản (Ảnh, Tên, số điện thoại, email, địa chỉ) 
 		- Đổi mật khẩu tài khoản
-	* Chức năng 6 : Tìm kiếm 
-		- Tìm kiếm tên phim , thể loại phim
+
 	* Chức năng 7 : Bình luận 
-	 	- Khách hàng có thể bình luận về phim
-		- khách hàng cũng có thể bình luận về rạp 
+	 	-chỉ khách hàng có tài khoản mới có thể bình luận
+		-bày tỏ về thái độ phục vụ, hay chất lượng của phim, rạp
