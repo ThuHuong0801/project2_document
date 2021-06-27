@@ -1,6 +1,6 @@
 Đề tài : 
-	
-Phần mềm quản lý bán vé xem phim 
+	Phần mềm quản lý bán vé xem phim 
+
 Mô tả : 
 Công ty ABC là công ty công chiếu phim có rất nhiều chi nhánh và phim chiếu trong ngày. 
 Để tránh tình trạng khách hàng chen lấn xô đẩy khi mua vé xem phim  và có thể không mua được vé theo phim mình mong muốn, 
@@ -62,7 +62,7 @@ Yêu cầu chức năng:
 
 
 
-3. Khách hàng : 
+3. User : 
 	Lưu ý : Có 2 đối tượng là khách hàng có tài khoản và khách không có tài khoản 
 	khách có tài khoản sẽ có nhiều quyền hơn(mua vé, xem lịch sử mua, xem tài khoản, chỉnh sửa thông tin tài khoản)
 
